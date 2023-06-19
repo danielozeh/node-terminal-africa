@@ -2,24 +2,49 @@
   "name": "terminal-africa",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/index.js",
+  "main": "lib/index.ts",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare" : "npm run build",
-    "prepublishOnly" : "npm test && npm run lint",
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danielozeh/node-terminal-africa.git"
   },
-  "keywords": ["shipping", "terminal africa", "node", "javascript", "typescript", "address", "parcel", "packaging", "carriers", "rates", "shipment", "node package", "dhl", "fedex", "gig", "kwik", "vue", "dellyman", "couriers", "terminal-africa", "logistics", "africa", "ups", "aramex"],
+  "keywords": [
+    "shipping",
+    "terminal africa",
+    "node",
+    "javascript",
+    "typescript",
+    "address",
+    "parcel",
+    "packaging",
+    "carriers",
+    "rates",
+    "shipment",
+    "node package",
+    "dhl",
+    "fedex",
+    "gig",
+    "kwik",
+    "vue",
+    "dellyman",
+    "couriers",
+    "terminal-africa",
+    "logistics",
+    "africa",
+    "ups",
+    "aramex"
+  ],
   "author": "Daniel Ozeh <hello@danielozeh.com.ng>",
   "license": "ISC",
   "bugs": {
@@ -37,5 +62,10 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "axios": "^1.4.0",
+    "dotenv": "^16.3.1"
+  }
 }
