@@ -1,4 +1,5 @@
 import Address from "./modules/address";
+import Carrier from "./modules/carriers";
 
 export default class TerminalAfrica {
     static createAddress(address_data: object) {
@@ -27,5 +28,29 @@ export default class TerminalAfrica {
     
     static getDefaultSenderAddress() {
         return Address.getDefaultSenderAddress()
+    }
+
+    static getCarriers(queryParams: any) {
+        return Carrier.getCarriers(queryParams)
+    }
+
+    static getCarrier(carrierId: string) {
+        return Carrier.getCarrier(carrierId)
+    }
+
+    static enableCarrier(carrierId: string, queryParams: string) {
+        return Carrier.enableCarrier(carrierId, queryParams)
+    }
+
+    static disableCarrier(carrierId: string, queryParams: string) {
+        return Carrier.disableCarrier(carrierId, queryParams)
+    }
+
+    static enableMultipleCarrier(carriers: any) {
+        return Carrier.enableMultipleCarrier(carriers)
+    }
+
+    static disableMultipleCarrier(carriers: any) {
+        return Carrier.disableMultipleCarrier(carriers)
     }
 }
