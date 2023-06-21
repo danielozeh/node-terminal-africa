@@ -1,6 +1,7 @@
 import Address from "./modules/address";
 import Carrier from "./modules/carriers";
 import Packaging from "./modules/packaging";
+import Parcel from "./modules/parcel";
 
 export default class TerminalAfrica {
     static createAddress(address_data: object) {
@@ -73,5 +74,21 @@ export default class TerminalAfrica {
 
     static terminalDefaultPackaging() {
        return Packaging.terminalDefaultPackaging()
+    }
+
+    static createParcel(parcel_data: object) {
+        return Parcel.createParcel(parcel_data)
+    }
+
+    static updateParcel(parcelId: string, parcel_data: object) {
+        return Parcel.updateParcel(parcelId, parcel_data)
+    }
+
+    static getParcels(queryParams: any) {
+        return Parcel.getParcels(queryParams)
+    }
+
+    static getParcel(parcelId: string) {
+        return Parcel.getParcel(parcelId)
     }
 }
