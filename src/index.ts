@@ -1,5 +1,6 @@
 import Address from "./modules/address";
 import Carrier from "./modules/carriers";
+import Claim from "./modules/claim";
 import Insurance from "./modules/insurance";
 import Packaging from "./modules/packaging";
 import Parcel from "./modules/parcel";
@@ -178,5 +179,17 @@ export default class TerminalAfrica {
 
     static purchaseInsurance(shipment: string) {
         return Insurance.purchaseInsurance(shipment)
+    }
+
+    static getClaims(queryParams: string) {
+        return Claim.getClaims(queryParams)
+    }
+
+    static getClaim(claimId: string) {
+        return Claim.getClaim(claimId)
+    }
+
+    static fileClaim(claim_data: object) {
+        return Claim.fileClaim(claim_data)
     }
 }
