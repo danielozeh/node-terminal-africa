@@ -3,6 +3,7 @@ import Carrier from "./modules/carriers";
 import Packaging from "./modules/packaging";
 import Parcel from "./modules/parcel";
 import Rate from "./modules/rate";
+import Shipment from './modules/shipment';
 
 export default class TerminalAfrica {
     static createAddress(address_data: object) {
@@ -111,5 +112,46 @@ export default class TerminalAfrica {
 
     static getRate(rateId: string) {
         return Rate.getRate(rateId)
+    }
+
+
+    static createShipment(shipment_data: object) {
+        return Shipment.createShipment(shipment_data)
+    }
+
+    static createQuickShipment(shipment_data: object) {
+       return Shipment.createQuickShipment(shipment_data)
+    }
+
+    static updateShipment(shipmentId: string, shipment_data: object) {
+      return Shipment.updateShipment(shipmentId, shipment_data)
+    }
+
+    static getShipments(queryParams: any) {
+        return Shipment.getShipments(queryParams)
+    }
+
+    static getShipment(shipmentId: string) {
+        return Shipment.getShipment(shipmentId)
+    }
+
+    static trackShipment(shipmentId: string) {
+       return Shipment.trackShipment(shipmentId)
+    }
+
+    static cancelShipment(shipmentId: string) {
+        return Shipment.cancelShipment(shipmentId)
+    }
+
+    static deleteShipment(shipmentId: string) {
+        return Shipment.deleteShipment(shipmentId)
+    }
+
+    static duplicateShipment(shipmentId: string) {
+        return Shipment.duplicateShipment(shipmentId)
+    }
+
+    static arrangePickup(shipment_data: object) {
+        return Shipment.arrangePickup(shipment_data)
     }
 }
