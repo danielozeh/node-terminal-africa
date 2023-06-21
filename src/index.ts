@@ -1,5 +1,6 @@
 import Address from "./modules/address";
 import Carrier from "./modules/carriers";
+import Packaging from "./modules/packaging";
 
 export default class TerminalAfrica {
     static createAddress(address_data: object) {
@@ -52,5 +53,25 @@ export default class TerminalAfrica {
 
     static disableMultipleCarrier(carriers: any) {
         return Carrier.disableMultipleCarrier(carriers)
+    }
+
+    static createPackaging(packaging_data: object) {
+        return Packaging.createPackaging(packaging_data)
+    }
+
+    static updatePackaging(packagingId: string, packaging_data: object) {
+        return Packaging.updatePackaging(packagingId, packaging_data)
+    }
+
+    static getPackagings(queryParams: any) {
+        return Packaging.getPackagings(queryParams)
+    }
+
+    static getPackaging(packagingId: string) {
+        return Packaging.getPackaging(packagingId)
+    }
+
+    static terminalDefaultPackaging() {
+       return Packaging.terminalDefaultPackaging()
     }
 }
