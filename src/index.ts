@@ -2,6 +2,7 @@ import Address from "./modules/address";
 import Carrier from "./modules/carriers";
 import Packaging from "./modules/packaging";
 import Parcel from "./modules/parcel";
+import Rate from "./modules/rate";
 
 export default class TerminalAfrica {
     static createAddress(address_data: object) {
@@ -90,5 +91,25 @@ export default class TerminalAfrica {
 
     static getParcel(parcelId: string) {
         return Parcel.getParcel(parcelId)
+    }
+
+    static getShipmentRates(queryParams: string) {
+       return Rate.getShipmentRates(queryParams)
+    }
+
+    static getQuotesForShipment(quotes_data: object) {
+       return Rate.getQuotesForShipment(quotes_data)
+    }
+
+    static getMultiPieceShipmentRates(rate_data: object) {
+        return Rate.getMultiPieceShipmentRates(rate_data)
+    }
+
+    static getRates(queryParams: any) {
+        return Rate.getRates(queryParams)
+    }
+
+    static getRate(rateId: string) {
+        return Rate.getRate(rateId)
     }
 }
