@@ -1,5 +1,6 @@
 import Address from "./modules/address";
 import Carrier from "./modules/carriers";
+import Insurance from "./modules/insurance";
 import Packaging from "./modules/packaging";
 import Parcel from "./modules/parcel";
 import Rate from "./modules/rate";
@@ -153,5 +154,29 @@ export default class TerminalAfrica {
 
     static arrangePickup(shipment_data: object) {
         return Shipment.arrangePickup(shipment_data)
+    }
+
+    static getInsuranceList(queryParams: string) {
+        return Insurance.getInsuranceList(queryParams)
+    }
+
+    static getInsurance(insuranceId: string) {
+        return Insurance.getInsurance(insuranceId)
+    }
+
+    static getInsuranceUsingShipment(shipmentId: string) {
+        return Insurance.getInsuranceUsingShipment(shipmentId)
+    }
+
+    static getInsurancePremium(parcel_id: string) {
+        return Insurance.getInsurancePremium(parcel_id)
+    }
+
+    static getInsurancePremiumUsingParcelValue(parcel_data: object) {
+        return Insurance.getInsurancePremiumUsingParcelValue(parcel_data)
+    }
+
+    static purchaseInsurance(shipment: string) {
+        return Insurance.purchaseInsurance(shipment)
     }
 }
