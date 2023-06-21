@@ -6,6 +6,7 @@ import Packaging from "./modules/packaging";
 import Parcel from "./modules/parcel";
 import Rate from "./modules/rate";
 import Shipment from './modules/shipment';
+import Transaction from "./modules/transaction";
 
 export default class TerminalAfrica {
     static createAddress(address_data: object) {
@@ -191,5 +192,13 @@ export default class TerminalAfrica {
 
     static fileClaim(claim_data: object) {
         return Claim.fileClaim(claim_data)
+    }
+
+    static getTransactions(queryParams: string) {
+        return Transaction.getTransactions(queryParams)
+    }
+
+    static getTransaction(transactionId: string) {
+        return Transaction.getTransaction(transactionId)
     }
 }
