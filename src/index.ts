@@ -9,6 +9,7 @@ import Shipment from './modules/shipment';
 import Transaction from "./modules/transaction";
 import User from "./modules/user";
 import Webhook from "./modules/webhook";
+import Location from "./modules/location";
 
 export default class TerminalAfrica {
     static createAddress(address_data: object) {
@@ -246,5 +247,17 @@ export default class TerminalAfrica {
 
     static disableWebhook(webhookId: string) {
         return Webhook.disableWebhook(webhookId)
+    }
+
+    static countries() {
+        return Location.countries()
+    }
+
+    static states(countryCode: string) {
+        return Location.states(countryCode)
+    }
+
+    static cities(countryCode: string, stateCode: string = '') {
+        return Location.cities(countryCode, stateCode)
     }
 }

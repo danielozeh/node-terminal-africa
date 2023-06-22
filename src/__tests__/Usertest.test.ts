@@ -1,5 +1,5 @@
 import TerminalAfrica from '../index';
-const userId = 'USER-12568655307'
+const userId = 'USER-'
 
 test('get user', async () => {
     const user: any = await TerminalAfrica.getUser(userId)
