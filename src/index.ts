@@ -8,6 +8,7 @@ import Rate from "./modules/rate";
 import Shipment from './modules/shipment';
 import Transaction from "./modules/transaction";
 import User from "./modules/user";
+import Webhook from "./modules/webhook";
 
 export default class TerminalAfrica {
     static createAddress(address_data: object) {
@@ -217,5 +218,33 @@ export default class TerminalAfrica {
 
     static carriers() {
         return User.carriers()
+    }
+
+    static createWebhook(webhook_data: object) {
+        return Webhook.createWebhook(webhook_data)
+    }
+
+    static updateWebhook(webhookId: string, webhook_data: object) {
+        return Webhook.updateWebhook(webhookId, webhook_data)
+    }
+
+    static getWebhooks(queryParams: any) {
+        return Webhook.getWebhooks(queryParams)
+    }
+
+    static getWebhook(webhookId: string) {
+        return Webhook.getWebhook(webhookId)
+    }
+
+    static deleteWebhook(webhookId: string) {
+        return Webhook.deleteWebhook(webhookId)
+    }
+
+    static enableWebhook(webhookId: string) {
+        return Webhook.enableWebhook(webhookId)
+    }
+
+    static disableWebhook(webhookId: string) {
+        return Webhook.disableWebhook(webhookId)
     }
 }
