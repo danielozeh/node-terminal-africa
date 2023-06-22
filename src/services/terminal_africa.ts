@@ -1,12 +1,12 @@
-import axios from "axios"
-import config from "../config"
+import axios from 'axios';
+import config from '../config';
 
 const terminalAfricaInstance = axios.create({
-    baseURL: `${config.base_url}/v1`,
-    headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${config.secret_key}`
-    }
-})
+  baseURL: `${config.base_url}/v1`,
+  headers: {
+    'Content-Type': 'application/json',
+    Authorization: `Bearer ${config.secret_key}`,
+  },
+});
 
-export default terminalAfricaInstance
+export default terminalAfricaInstance;
