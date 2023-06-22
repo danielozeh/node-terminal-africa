@@ -7,6 +7,7 @@ import Parcel from "./modules/parcel";
 import Rate from "./modules/rate";
 import Shipment from './modules/shipment';
 import Transaction from "./modules/transaction";
+import User from "./modules/user";
 
 export default class TerminalAfrica {
     static createAddress(address_data: object) {
@@ -200,5 +201,21 @@ export default class TerminalAfrica {
 
     static getTransaction(transactionId: string) {
         return Transaction.getTransaction(transactionId)
+    }
+
+    static getUser(userId: string) {
+        return User.getUser(userId)
+    }
+
+    static walletInfo(userId: string) {
+        return User.walletInfo(userId)
+    }
+
+    static walletBalance(userId: string) {
+        return User.walletBalance(userId)
+    }
+
+    static carriers() {
+        return User.carriers()
     }
 }
