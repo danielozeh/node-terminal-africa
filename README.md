@@ -55,5 +55,9 @@ or
 - [All Contributors](../../contributors)
 
 
+## License
+- MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+
 ## Terminal Africa Official Documentation
 You can find Terminal Official Documentation <a href="https://docs.terminal.africa/tship/" target="_blank"> here </a>
