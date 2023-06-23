@@ -2,7 +2,7 @@
   "name": "terminal-africa",
   "version": "1.0.2",
   "description": "",
-  "main": "lib/index.ts",
+  "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest --config jestconfig.json",
