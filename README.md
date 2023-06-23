@@ -11,7 +11,7 @@ npm >= 6.0.0
 ```
 
 ### Package Documentation
-<a href="" target="_blank"> Here is a comprehensive documentation is available to help you get started </a>
+<a href="" target="_blank"> Here </a> is a comprehensive documentation to help you get started
 
 ## Setup
 Insall the package to your application.
