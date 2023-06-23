@@ -3,15 +3,16 @@
 ## Introduction
 The Terminal Shipping API (TShip) provides a single interface for integrating shipping carriers within your applications. The API allows anyone to programatically get shipping rates and arrange pickup and delivery.
 
+
 ## Quick start
 ### Requirements
 ```
 node >= 14.0.0
 npm >= 6.0.0
 ```
-
 ### Package Documentation
 <a href="" target="_blank"> Here </a> is a comprehensive documentation to help you get started
+
 
 ## Setup
 Insall the package to your application.
@@ -48,9 +49,11 @@ or
 
 `const TerminalAfrica = require('terminal-africa')`
 
+
 ## Credits
 - [Daniel Ozeh](https://github.com/danielozeh)
 - [All Contributors](../../contributors)
+
 
 ## Terminal Africa Official Documentation
 You can find Terminal Official Documentation <a href="https://docs.terminal.africa/tship/" target="_blank"> here </a>
