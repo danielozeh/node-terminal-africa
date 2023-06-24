@@ -11,7 +11,7 @@ node >= 14.0.0
 npm >= 6.0.0
 ```
 ### Package Documentation
-<a href="" target="_blank"> Here </a> is a comprehensive documentation to help you get started
+<a href="https://node-terminal-africa.vercel.app/" target="_blank"> Here </a> is a comprehensive documentation to help you get started
 
 
 ## Setup
