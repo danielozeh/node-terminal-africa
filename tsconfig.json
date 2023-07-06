@@ -3,8 +3,10 @@
       "target": "es5",
       "module": "commonjs",
       "declaration": true,
+      "esModuleInterop": true,
       "outDir": "./lib",
-      "strict": true
+      "strict": true,
+      "moduleResolution": "NodeNext"
     },
     "include": ["src"],
     "exclude": ["node_modules", "**/__tests__/*"]
